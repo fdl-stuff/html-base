@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- this has to be adjusted to the equivelant site :3 -->
+    <title>Freie Dorfschule Lübeck</title>
+    <meta name="web_author" content="Felix Johannes Caldeira Cabral">
+    <meta name="designer" content="Felix Johannes Caldeira Cabral">
+    <meta name="description" content="Freie Dorfschule Lübeck - Achtsam miteinander lernen, verantwortlich handeln.">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="pinterest" content="nopin"/>
+
+    <!-- important need to update this -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#4491EA">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#4491EA">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#4491EA">
+
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="http://localhost"/>
+    <meta property="og:title" content="Freie Dorfschule Lübeck" />
+    <meta property="og:description" content="Freie Dorfschule Lübeck - Achtsam miteinander lernen, verantwortlich handeln." />
+    <meta property="og:image" content="https://www.freie-dorfschule-luebeck.de/mediapool/150/1501904/resources/logo.png"/>
+    <style>
+        :root {
+            --primary-color: #4491EA;
+            --button-color: #FFFFFF;
+            --dark-button-color: #cccccc;
+
+            --fdl-dark-background: #494949;
+            --fdl-dark-dark-background: #3a3a3a;
+            --fdl-dark-secondary: #ffffff;
+            --fdl-dark-dark-secondary: #cccccc;
+
+            --fdl-light-background: #ffffff;
+            --fdl-light-dark-background: #cccccc;
+            --fdl-light-secondary: #494949;
+            --fdl-light-dark-secondary: #3a3a3a;
+        }
+
+        body, html {
+            background-color: var(--fdl-light-background);
+            height: 100%;
+            font-family: sans-serif, serif;
+            display:flex; 
+            margin: 0;
+            flex-direction:column; 
+        }
+    </style>
+</head>
+<body>
+    <style>        
+        body {
+            display: table;
+            width: 100%;
+        }
+        #page-container {
+            position: relative;
+        }
+    </style>
+    <div id="page-container">
+        <style>
+            header {
+                background-color: var(--fdl-light-background);
+                text-align: center;
+            }
+            header a {
+                    text-decoration: none;
+                    color: currentColor;
+                    cursor: pointer;
+            }
+            header #header-img {
+                    height: 8rem;
+                    margin: 1rem 0 0;
+            }
+            header #header-text {
+                    color: var(--primary-color);
+                    padding: 0;
+                    margin: 0;
+            }   
+            @media(max-width: 1000px) {
+                header #header-text {
+                    font-size: 1.5rem;
+                }   
+            } 
+            @media(min-width: 1000px) {
+                header #header-text {
+                    font-size: 3rem;
+                }   
+            }
+        </style>
+        <header>
+            <h1 id="header-text"><a href="/">
+                <img id="header-img" src="img/body/header/bee.svg" alt="Logo">
+                <br>
+                Freie Dorfschule Lübeck
+            </a></h1>
+        </header>
+        <style>
+            /* mobile */
+            @media (max-width: 1000px) {
+                nav {
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                nav #dropdown-btn  {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                nav #dropdown-btn span {
+                    width: 5rem;
+                    text-align: center;
+                    cursor: pointer;
+                    padding: 0 0.5rem;
+                    border-color: var(--primary-color);
+                    border-width: 0.2rem;
+                    border-style: solid;
+                    border-radius: 10px;
+                    color: var(--fdl-light-secondary);
+                    font-size: 1.5rem;
+                }
+                nav .dropdown-inactive {
+                    display: none;
+                }
+                nav .dropdown-content {
+                    position: absolute;
+                    width: auto;
+                    border: var(--primary-color);
+                    border-width: 0.2rem 0;
+                    border-style: solid;
+                    border-radius: 10px;
+                    padding: 0.5rem 0;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--fdl-light-background);
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    top: 14.5rem;
+                }
+
+                nav ul {
+                    text-align: left;
+                }
+
+                nav ul li {
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                }
+
+                nav #nav-login {
+                    border-radius: 0.5rem;
+                }
+
+                nav #nav-login span {
+                    font-size: 0;
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: var(--primary-color);
+                    border-radius: 50%;
+                }
+
+                nav #nav-login img {
+                    height: 2rem;
+                }
+
+                nav #dropdown-btn span:hover, nav #dropdown-btn span:focus {
+                    background-color: var(--fdl-light-dark-background);
+                }
+
+                nav a {
+                    text-decoration: none;
+                    color: currentColor;
+                    cursor: pointer;
+                }
+
+                nav a:hover {
+                    color: var(--fdl-light-dark-secondary);
+                }
+
+                #navbar {
+                    flex-direction: column;
+                }
+            }
+            
+            @media(min-width: 1000px) {
+                #dropdown-btn {
+                    display:none;
+                }
+                
+                #navDropdown {
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                nav ul {
+                    display: flex;
+                    text-align: center;
+                }
+
+                nav ul li {
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                }
+
+                nav #nav-login {
+                    border-radius: 1rem;
+                }
+
+                nav #nav-login span {
+                    font-size: 1.4rem;
+                }
+
+                nav #nav-login img {
+                    display: none
+                }
+
+                #navbar {
+                    flex-direction: row;
+                }
+
+            }
+
+            nav  {
+                background-color: var(--fdl-light-background);
+                box-shadow: 0 20px 20px -18px #333;
+                width: 100%;
+                padding: 0.5rem 0;
+                display: flex;
+                flex-direction: row;
+            }
+            nav .left.inner-wrapper, nav .right.inner-wrapper {
+                flex: 1;
+                display: flex;
+                min-width: -webkit-min-content;
+            }
+            nav .right.inner-wrapper {
+                justify-content: flex-end;
+            }
+            #dropdown-btn {
+                display:none;
+            }
+            nav #nav-flag-container {
+                border: var(--fdl-light-secondary);
+                border-width: 0.2rem;
+                border-style: solid;
+                border-radius: 4px;
+                box-sizing: border-box;
+                height: 3rem;
+                min-height: 3rem;
+                margin: 0 0 0 2rem;
+            }
+            nav #nav-flag {
+                height: 100%;
+            }
+            nav ul {
+                margin: 0;
+                width: 100%;
+                list-style-type: none;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 0 1rem;
+                color: var(--fdl-light-secondary);
+            }
+            nav ul a {
+                text-decoration: none;
+                color: currentColor;
+                cursor: pointer;
+            }
+            nav ul a:hover {
+                color: var(--fdl-light-dark-secondary)
+            }
+            nav #nav-login {
+                height: 3rem;
+                width: auto;
+                min-height: 3rem;
+                min-width: auto;
+                background-color: var(--primary-color);
+                margin: 0 2rem 0 0;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            nav #nav-login span {
+                margin: 0 1rem;
+                color: var(--button-color);
+            }
+
+
+            #header-text {
+                font-weight: 700;
+            }   
+        </style>
+        <nav>
+            <div class="left inner-wrapper">
+                <div id="nav-flag-container">
+                    <img src="img/body/flags/de.svg" alt="Deutsch" id="nav-flag"></img>
+                </div>
+            </div>
+            <div class="center inner-wrapper" id="dropdown-btn"><span onclick="openDropdown()" id="inner-dropdown-btn">☰</span></div>
+
+            <div id="navDropdown" class="dropdown-content dropdown-inactive">
+
+                <div class="center inner-wrapper">
+                    <ul id="navbar">
+                        <li><a href="/">Artikel</a></li>
+                        <li><a href="/">Info</a></li>
+                        <li><a href="/">Pädagogik</a></li>
+                        <li><a href="/">Schule</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="right inner-wrapper">
+                <div id="nav-login"><span>Anmelden<img src="img/body/header/guest.svg" alt="Gast"></span></div>
+            </div>
+        </nav>
+
+        <div id="content-wrap">
+            <style>
+                main {
+                    z-index: 1;
+                }
+            </style>
+            <main>
+                
+            </main>
+        </div>
+
+        <script>
+            function openDropdown() {
+                document.getElementById("navDropdown").classList.toggle("show");
+                document.getElementById("navDropdown").classList.toggle("dropdown-inactive")
+            }
+            window.addEventListener("click", function(event) {
+                if (document.getElementById("inner-dropdown-btn") !== event.target) {
+                    var dropdown = document.getElementById("navDropdown");
+                    if (dropdown.classList.contains('show')) {
+                        dropdown.classList.toggle("show");
+                        dropdown.classList.toggle("dropdown-inactive")
+                    }
+                }
+            });
+        </script>
+    </div>
+    <style>
+        footer {
+            height: 10rem;
+            display: table-row;
+            width: 100%;
+            background-color: var(--primary-color);
+        }
+        #footer-flex {
+            height: 100%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #footer-copyright {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #footer-copyright p {
+            font-size: 1.2rem;
+            color: var(--button-color);
+        }
+
+        #footer-navbar ul {
+            display: flex;
+            margin-top: 1rem;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+
+        }
+        #footer-navbar ul li {
+            margin: 0 0.5rem;
+            color: var(--button-color);
+            font-size: 1.2rem;
+        }
+        #footer-navbar ul li a {
+            text-decoration: none;
+            color: currentColor;
+            cursor: pointer;
+        }
+        #footer-navbar ul li a:hover {
+            color: var(--dark-button-color);
+        }
+    </style>
+    <footer>
+        <div id="footer-flex">
+            <div id="footer-copyright">
+                <p>© 2020 Freie Dorfschule Lübeck</p>
+            </div>
+            <div id="footer-navbar">
+                <ul>
+                    <li><a href="/">Impressum</a></li>
+                    <li><a href="/">Kontakt</a></li>
+                    <li><a href="/">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

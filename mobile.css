@@ -1,0 +1,89 @@
+nav {
+    justify-content: center;
+    align-items: center;
+}
+
+nav #dropdown-btn  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav #dropdown-btn span {
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    border: var(--primary-color);
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 10px;
+    color: var(--fdl-light-secondary);
+    font-size: 1.5rem;
+}
+nav .dropdown-inactive {
+    display: none;
+}
+nav .dropdown-content {
+    position: absolute;
+    width: auto;
+    border: theme-get(primary);
+    border-width: 0.2rem 0;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: theme-get(background);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 14.5rem;
+}
+
+nav ul {
+    text-align: left;
+}
+
+nav ul li {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+nav #nav-login {
+    border-radius: 0.5rem;
+}
+
+nav #nav-login span {
+    font-size: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: theme-get(primary);
+    border-radius: 50%;
+}
+
+nav #nav-login img {
+    height: 2rem;
+}
+
+nav #dropdown-btn span:hover, nav #dropdown-btn span:focus {
+    background-color: darken($color: theme-get(background), $amount: 15%);
+}
+
+nav a {
+    text-decoration: none;
+    color: currentColor;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: darken($color: theme-get(secondary), $amount: 30%)
+}
+
+#navbar {
+    flex-direction: column;
+}
+
+#header-text {
+    font-size: 1.5rem;
+}

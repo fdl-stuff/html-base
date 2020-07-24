@@ -1,0 +1,32 @@
+#dropdown-btn {
+    display:none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+nav #nav-login {
+    border-radius: 1rem;
+}
+
+nav #nav-login span {
+    font-size: 1.4rem;
+}
+
+nav #nav-login img {
+    display: none
+}
+
+#navbar {
+    flex-direction: row;
+}
+
+#header-text {
+    font-size: 3rem;
+}   
