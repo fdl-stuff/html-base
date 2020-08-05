@@ -43,14 +43,19 @@
             --dark-button-color: #cccccc;
 
             --fdl-dark-background: #494949;
-            --fdl-dark-dark-background: #3a3a3a;
+            --fdl-dark-dark-background: #292929;
             --fdl-dark-secondary: #ffffff;
             --fdl-dark-dark-secondary: #cccccc;
 
             --fdl-light-background: #ffffff;
             --fdl-light-dark-background: #cccccc;
             --fdl-light-secondary: #494949;
-            --fdl-light-dark-secondary: #3a3a3a;
+            --fdl-light-dark-secondary: #292929;
+
+            /* --fdl-light-background: #494949;
+            --fdl-light-dark-background: #3a3a3a;
+            --fdl-light-secondary: #ffffff;
+            --fdl-light-dark-secondary: #cccccc; */
         }
 
         body, html {
@@ -144,7 +149,7 @@
                     position: absolute;
                     width: auto;
                     border: var(--primary-color);
-                    border-width: 0.2rem 0;
+                    border-width: 0.2rem 0.1rem;
                     border-style: solid;
                     border-radius: 10px;
                     padding: 0.5rem 0;
@@ -163,6 +168,8 @@
 
                 nav ul li {
                     font-weight: 600;
+                    margin: 0 0.8rem;
+                    padding-right: 2rem;
                     font-size: 1.1rem;
                 }
 
@@ -218,6 +225,7 @@
                 }
 
                 nav ul li {
+                    margin: 0 1rem;
                     font-weight: 700;
                     font-size: 1.4rem;
                 }
@@ -266,11 +274,10 @@
                 border-radius: 4px;
                 box-sizing: border-box;
                 height: 3rem;
-                min-height: 3rem;
                 margin: 0 0 0 2rem;
-            }
-            nav #nav-flag {
-                height: 100%;
+                background-image: url("img/body/flags/de.svg");
+                background-size: contain;
+                width: 4rem;
             }
             nav ul {
                 margin: 0;
@@ -279,16 +286,19 @@
                 padding: 0;
             }
             nav ul li {
-                margin: 0 1rem;
                 color: var(--fdl-light-secondary);
+            }
+            nav ul hr {
+                margin: 0.5rem 0;
+                border-color: var(--primary-color);
             }
             nav ul a {
                 text-decoration: none;
                 color: currentColor;
                 cursor: pointer;
             }
-            nav ul a:hover {
-                color: var(--fdl-light-dark-secondary)
+            nav ul a:hover li {
+                color: var(--fdl-light-dark-secondary);
             }
             nav #nav-login {
                 height: 3rem;
@@ -315,9 +325,7 @@
         </style>
         <nav>
             <div class="left inner-wrapper">
-                <div id="nav-flag-container">
-                    <img src="img/body/flags/de.svg" alt="Deutsch" id="nav-flag"></img>
-                </div>
+                <div id="nav-flag-container"></div>
             </div>
             <div class="center inner-wrapper" id="dropdown-btn"><span onclick="openDropdown()" id="inner-dropdown-btn">☰</span></div>
 
@@ -325,14 +333,33 @@
 
                 <div class="center inner-wrapper">
                     <ul id="navbar">
-                        <li><a href="/">Artikel</a></li>
-                        <li><a href="/">Info</a></li>
-                        <li><a href="/">Pädagogik</a></li>
-                        <li><a href="/">Schule</a></li>
+                        <a href="/"><li>Artikel</li></a>
+                        <hr>
+                        <a href="/"><li>Info</li></a>
+                        <hr>
+                        <a href="/"><li>Pädagogik</li></a>
+                        <hr>
+                        <a href="/"><li>Schule</li></a>
                     </ul>
                 </div>
 
             </div>
+            
+            <script>
+                function openDropdown() {
+                    document.getElementById("navDropdown").classList.toggle("show");
+                    document.getElementById("navDropdown").classList.toggle("dropdown-inactive")
+                }
+                window.addEventListener("click", function(event) {
+                    if (document.getElementById("inner-dropdown-btn") !== event.target) {
+                        var dropdown = document.getElementById("navDropdown");
+                        if (dropdown.classList.contains('show')) {
+                            dropdown.classList.toggle("show");
+                            dropdown.classList.toggle("dropdown-inactive")
+                        }
+                    }
+                });
+            </script>
             <div class="right inner-wrapper">
                 <div id="nav-login"><span>Anmelden<img src="img/body/header/guest.svg" alt="Gast"></span></div>
             </div>
@@ -342,28 +369,77 @@
             <style>
                 main {
                     z-index: 1;
+                    height: 100%;
                 }
             </style>
             <main>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 
             </main>
         </div>
-
-        <script>
-            function openDropdown() {
-                document.getElementById("navDropdown").classList.toggle("show");
-                document.getElementById("navDropdown").classList.toggle("dropdown-inactive")
-            }
-            window.addEventListener("click", function(event) {
-                if (document.getElementById("inner-dropdown-btn") !== event.target) {
-                    var dropdown = document.getElementById("navDropdown");
-                    if (dropdown.classList.contains('show')) {
-                        dropdown.classList.toggle("show");
-                        dropdown.classList.toggle("dropdown-inactive")
-                    }
-                }
-            });
-        </script>
     </div>
     <style>
         footer {
@@ -383,48 +459,40 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
-        }
-        #footer-copyright p {
             font-size: 1.2rem;
             color: var(--button-color);
         }
-
-        #footer-navbar ul {
+        #footer-navbar {
             display: flex;
             margin-top: 1rem;
             justify-content: center;
             align-items: center;
             list-style-type: none;
             padding: 0;
-
+            margin-top: 0;
         }
-        #footer-navbar ul li {
+        #footer-navbar li {
             margin: 0 0.5rem;
             color: var(--button-color);
             font-size: 1.2rem;
         }
-        #footer-navbar ul li a {
+        #footer-navbar li a {
             text-decoration: none;
             color: currentColor;
             cursor: pointer;
         }
-        #footer-navbar ul li a:hover {
+        #footer-navbar li a:hover {
             color: var(--dark-button-color);
         }
     </style>
     <footer>
         <div id="footer-flex">
-            <div id="footer-copyright">
-                <p>© 2020 Freie Dorfschule Lübeck</p>
-            </div>
-            <div id="footer-navbar">
-                <ul>
-                    <li><a href="/">Impressum</a></li>
-                    <li><a href="/">Kontakt</a></li>
-                    <li><a href="/">Datenschutz</a></li>
-                </ul>
-            </div>
+            <p id="footer-copyright">© 2020 Freie Dorfschule Lübeck</p>
+            <ul id="footer-navbar">
+                <li><a href="/">Impressum</a></li>
+                <li><a href="/">Kontakt</a></li>
+                <li><a href="/">Datenschutz</a></li>
+            </ul>
         </div>
     </footer>
 </body>
